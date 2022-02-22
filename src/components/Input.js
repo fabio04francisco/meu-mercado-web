@@ -18,6 +18,10 @@ export default styled.input`
     border-color: #64BA01;
   }
 
+  &::placeholder {
+  color: #8F8F8F8F;
+}
+
   /* ${({ theme, error }) => error && css`
     color: ${theme.colors.danger.main};
     border-color: ${theme.colors.danger.main} !important;
