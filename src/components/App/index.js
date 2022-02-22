@@ -3,7 +3,7 @@ import { Container } from './styles';
 
 import Login from '../../pages/Login';
 
-function App() {
+export default function App() {
   return (
     <>
       <GlobalStyles />
@@ -13,5 +13,3 @@ function App() {
     </>
   );
 }
-
-export default App;
