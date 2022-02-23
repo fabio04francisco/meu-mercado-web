@@ -19,11 +19,11 @@ export default styled.input`
   }
 
   &::placeholder {
-  color: #8F8F8F8F;
-}
+    color: #8F8F8F8F;
+  }
 
-  /* ${({ theme, error }) => error && css`
-    color: ${theme.colors.danger.main};
-    border-color: ${theme.colors.danger.main} !important;
-  `} */
+  ${({ error }) => error && css`
+    color: #FC5050;
+    border-color: #FC5050 !important;
+  `}
 `;
