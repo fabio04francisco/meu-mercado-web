@@ -45,6 +45,7 @@ export const Form = styled.form`
     width: 100%;
     text-align: center;
     margin-bottom: 85px;
+    color: #222222;
   }
 `;
 
