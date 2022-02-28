@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export default styled.button`
   width: 100%;
   height: 52px;
-  color: #FFFFFF;
+  color: ${({ theme }) => theme.colors.label};
   border-radius: 7px;
-  background-color: #64BA01;
+  background-color: ${({ theme }) => theme.colors.primary.main};
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.04);
   font-weight: bold;
   font-size: 16px;
@@ -13,15 +13,15 @@ export default styled.button`
   transition: background 0.2s ease-in;
 
   &:hover {
-    background: #7ce408;
+    background: ${({ theme }) => theme.colors.primary.light};
   }
 
   &:active {
-    background: #437f00;
+    background: ${({ theme }) => theme.colors.primary.dark};
   }
 
   &[disabled] {
-    background: #CCC;
+    background: ${({ theme }) => theme.colors.gray[100]};
     cursor: default;
   }
 `;

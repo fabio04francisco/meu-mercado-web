@@ -8,5 +8,5 @@ export const Container = styled.div`
   max-height: 896px;
   //border: 1px solid black;
 
-  background: #ffffff;
-`;
+  background: ${({ theme }) => theme.colors.background};
+  `;

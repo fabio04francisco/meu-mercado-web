@@ -6,7 +6,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 50px 25px;
-  border: 1px solid #8F8F8F8F;
+  border: 1px solid ${({ theme }) => theme.colors.gray[200]};
   width: 100%;
   height: 100%;
 
@@ -33,7 +33,7 @@ export const Container = styled.div`
 
   footer a {
     text-decoration: none;
-    color: #8F8F8F;
+    color: ${({ theme }) => theme.colors.gray[200]};
     font-size: 18px;
   }
 `;
@@ -45,7 +45,7 @@ export const Form = styled.form`
     width: 100%;
     text-align: center;
     margin-bottom: 85px;
-    color: #222222;
+    color: ${({ theme }) => theme.colors.gray[900]};
   }
 `;
 

@@ -7,9 +7,10 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
-  background: #64BA01;
+  background: ${({ theme }) => theme.colors.primary.main};
 
-  color: #ffffff;
+
+  color: ${({ theme }) => theme.colors.label};
   font-size: 22px;
 `;
 
