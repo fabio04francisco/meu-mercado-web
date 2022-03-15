@@ -14,6 +14,7 @@ export default {
       700: '#3A3A3A',
       200: '#8F8F8F',
       100: '#B9B9B9',
+      90: '#CCC',
     },
 
     danger: {
