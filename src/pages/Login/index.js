@@ -28,8 +28,8 @@ export default function Login() {
   function handleEmailChange(event) {
     setEmail(event.target.value);
 
-    if (!isEmailValid(event.target.value)) {
-      setError({ field: 'email', message: 'Email inválido' });
+    if (event.target.value && !isEmailValid(event.target.value)) {
+      setError({ field: 'email', message: 'Email inválido.' });
     } else {
       removeError('email');
     }
@@ -39,7 +39,7 @@ export default function Login() {
     setPassword(event.target.value);
 
     if (!event.target.value) {
-      setError({ field: 'password', message: 'Senha não pode ficar em branco' });
+      setError({ field: 'password', message: 'Senha é obrigatório.' });
     } else {
       removeError('password');
     }
