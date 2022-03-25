@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export default styled.select`
   width: 100%;
@@ -17,4 +17,8 @@ export default styled.select`
   &:focus{
     border-color:${({ theme }) => theme.colors.primary.main};
   }
+
+  ${({ error }) => error && css`
+    border-color: ${({ theme }) => theme.colors.danger.main} !important;
+  `}
 `;
