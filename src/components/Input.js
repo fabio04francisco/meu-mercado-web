@@ -23,7 +23,7 @@ export default styled.input`
   }
 
   ${({ error }) => error && css`
-    color: ${({ theme }) => theme.colors.danger.main};
+    //color: ${({ theme }) => theme.colors.danger.main};
     border-color: ${({ theme }) => theme.colors.danger.main} !important;
   `}
 `;
