@@ -31,10 +31,16 @@ export const Container = styled.div`
     }
   }
 
-  footer a {
-    text-decoration: none;
-    color: ${({ theme }) => theme.colors.gray[200]};
-    font-size: 18px;
+  footer {
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+
+    a {
+      text-decoration: none;
+      color: ${({ theme }) => theme.colors.gray[200]};
+      font-size: 18px;
+    }
   }
 `;
 
