@@ -9,45 +9,52 @@ import Button from '../../../components/Button';
 import { STATES } from '../../../constants';
 
 export default function StepAdress({
-  fields, handleFieldChange, handleClickStep,
+  fields, handleFieldChange, handleClickStep, errors, getErrorMessageByFieldName,
 }) {
   const {
-    adress, district, city, state, cep,
+    name, email, phone, adress, district, city, state, cep,
   } = fields;
+
+  const isFormValid = Boolean(name && email && phone && adress
+  && district && city && state && cep) && errors.length === 0;
 
   return (
     <Container>
-      <GroupForm>
+      <GroupForm error={getErrorMessageByFieldName('adress')}>
         <Input
           name="adress"
           value={adress}
-          placeholder="Endereço"
+          placeholder="Endereço *"
           onChange={handleFieldChange}
+          error={getErrorMessageByFieldName('adress')}
         />
       </GroupForm>
-      <GroupForm>
+      <GroupForm error={getErrorMessageByFieldName('district')}>
         <Input
           name="district"
           value={district}
-          placeholder="Bairro"
+          placeholder="Bairro *"
           onChange={handleFieldChange}
+          error={getErrorMessageByFieldName('district')}
         />
 
       </GroupForm>
-      <GroupForm>
+      <GroupForm error={getErrorMessageByFieldName('city')}>
         <Input
           name="city"
           value={city}
-          placeholder="Cidade"
+          placeholder="Cidade *"
           onChange={handleFieldChange}
+          error={getErrorMessageByFieldName('city')}
         />
       </GroupForm>
 
-      <GroupForm>
+      <GroupForm error={getErrorMessageByFieldName('state')}>
         <Select
           name="state"
           value={state}
           onChange={handleFieldChange}
+          error={getErrorMessageByFieldName('state')}
         >
           <option value="">Selecione um estado</option>
           {STATES.map((itemState) => (
@@ -62,12 +69,13 @@ export default function StepAdress({
         </Select>
       </GroupForm>
 
-      <GroupForm>
+      <GroupForm error={getErrorMessageByFieldName('cep')}>
         <Input
           name="cep"
           value={cep}
-          placeholder="CEP"
+          placeholder="CEP *"
           onChange={handleFieldChange}
+          error={getErrorMessageByFieldName('cep')}
         />
       </GroupForm>
 
@@ -79,6 +87,7 @@ export default function StepAdress({
 
         <Button
           type="submit"
+          disabled={!isFormValid}
         >
           Criar minha conta
         </Button>
