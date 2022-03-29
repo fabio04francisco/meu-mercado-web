@@ -86,7 +86,7 @@ export default function Login() {
 
       case 'password':
         if (inputValue.length < 6) {
-          setError({ field: 'password', message: 'Senha minimo 6 caracteres' });
+          setError({ field: 'password', message: 'Senha mínimo 6 caracteres' });
         } else {
           removeError('password');
         }
