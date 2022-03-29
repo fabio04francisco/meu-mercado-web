@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable react/jsx-no-bind */
 import { useState, useCallback } from 'react';
+import { Link } from 'react-router-dom';
 
 import { Container, Form } from './styles';
 
@@ -150,7 +151,7 @@ export default function Login() {
       </Form>
 
       <footer>
-        <a href="#teste">Já tenho uma conta.</a>
+        <Link to="/">Já tenho uma conta.</Link>
       </footer>
 
     </Container>
