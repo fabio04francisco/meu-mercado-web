@@ -1,17 +1,21 @@
 import { ThemeProvider } from 'styled-components';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { Container } from './styles';
 
 import GlobalStyles from '../../assets/styles/global';
 import themeDefault from '../../assets/styles/themes/default';
-import Login from '../../pages/Splash';
+
+import Routes from '../../routes';
 
 export default function App() {
   return (
-    <ThemeProvider theme={themeDefault}>
-      <GlobalStyles />
-      <Container>
-        <Login />
-      </Container>
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider theme={themeDefault}>
+        <GlobalStyles />
+        <Container>
+          <Routes />
+        </Container>
+      </ThemeProvider>
+    </Router>
   );
 }
