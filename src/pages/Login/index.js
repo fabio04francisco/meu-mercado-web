@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-no-bind */
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import { Container, Form, ButtonContainer } from './styles';
 
@@ -84,7 +85,7 @@ export default function Login() {
       </Form>
 
       <footer>
-        <a href="#teste">Ainda não tem uma conta? Crie agora.</a>
+        <Link to="/signin">Ainda não tem uma conta? Crie agora.</Link>
       </footer>
 
     </Container>
